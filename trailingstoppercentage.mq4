@@ -9,6 +9,7 @@ int seed=1000;
 int init(){  MathSrand(TimeLocal());  return(0);}
 int start()
 {
+      //
       //if(AccountBalance()<1000){return(0);}        
       if(OrdersTotal()<OpenOrders)
       {  

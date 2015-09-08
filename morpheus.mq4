@@ -12,6 +12,7 @@ extern double TakeProfit2 = 0.0300;
 extern double Percentage3 = 0.35;
 extern double TrailingStop3 = 0.0160;
 extern double TakeProfit3 = 0.0300;
+extern double closeallvalue = 75000;
 
 int count = 0;
 int random=0;
@@ -27,9 +28,9 @@ int init()
 int start()
 {
       //Print("Start");
-      if(AccountEquity()-AccountBalance()>75000)
+      if(AccountEquity()-AccountBalance()>closeallvalue)
       {
-         Print("Current profit greater than 75000");
+         //Print("Current profit greater than 75000");
          closeall();
       }
       

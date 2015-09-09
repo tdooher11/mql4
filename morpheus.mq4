@@ -16,6 +16,7 @@ extern double closeallvalue = 75000;
 
 int count = 0;
 int random=0;
+int sleep=0;
 extern int seed=1000;
 
 int init()
@@ -27,6 +28,14 @@ int init()
 
 int start()
 {
+      if(sleep<4)
+      {
+         Print("Sleeping");
+         sleep++;
+         return(0);
+      }
+      sleep=0;
+
       //Print("Start");
       if(AccountEquity()-AccountBalance()>closeallvalue)
       {
